@@ -82,3 +82,66 @@ DevOps brings:
 ## 💡 Key Takeaway
 
 **SDLC defines the process of developing and delivering software. DevOps improves that process through collaboration, automation, continuous testing, deployment, and monitoring.**
+
+                    🚀 SDLC
+       Software Development Life Cycle
+                         │
+                         ↓
+                    PLANNING
+                         │
+                 Business Analyst
+                  Requirements / BRD
+                         │
+                         ↓
+                     DEFINE
+                         │
+                  BA / Product Team
+                    SRS / Stories
+                         │
+                         ↓
+                     DESIGN
+                         │
+                Solution Architect
+                    HLD / LLD
+                         │
+                         ↓
+                      BUILD
+                         │
+                    Developers
+                         │
+                    Code → Git
+                         │
+                         ↓
+                      TEST
+                         │
+                       QE / QA
+                         │
+                    Testing
+                         │
+                         ↓
+                     DEPLOY
+                         │
+                      DevOps
+                 CI/CD + Automation
+                         │
+                         ↓
+              Staging / Pre-Prod
+                         │
+                         ↓
+                    Production
+                         │
+                         ↓
+                     Customer
+How DevOps improved:
+
+              👨‍💻 DEVOPS IMPROVES THE SDLC
+
+        Build → Test → Deploy → Monitor
+           │       │       │       │
+           └───────┴───────┴───────┘
+                       │
+                       ↓
+                  Automation
+                       │
+                       ↓
+          Faster + Reliable Delivery
