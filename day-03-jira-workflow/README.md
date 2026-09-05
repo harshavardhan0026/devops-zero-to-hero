@@ -160,3 +160,6 @@ Customer
 ## 💡 Key Takeaway
 
 > **Business requirements are gradually converted into technical work. Jira helps track that work through the backlog and sprints. DevOps supports the engineering team with infrastructure, automation, CI/CD, deployment and monitoring, helping the organization deliver software faster and more reliably.**
+
+
+
