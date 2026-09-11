@@ -1,5 +1,5 @@
 
-# 🚀 Day 6 — Linux & Shell Scripting — Part 2
+# 🚀 Day 6 — Linux & Shell Scripting — Part 3
 
 > Understanding automation, processes, pipes, grep, awk, shell scripting, and building a simple server health-check script.
 
