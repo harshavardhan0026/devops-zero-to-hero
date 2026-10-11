@@ -1,0 +1,291 @@
+# Day 9: Git & GitHub — Study Notes
+
+[SaaS Web Design Agency | Ramotion](https://images.openai.com/static-rsc-4/b9KWi3rbx7VUKaMm57fI9Oc83cngNGmOTSnN6lkQ5OUpAbztl7ppFDmKLVDqn0Tzfj8caqpEJNJQ4pry3t3InXP0qMdub9sKnGXknA_V9F_6NfEoS3kqNEnu60xa8yIFex3nFnmlYXj1EyuHVGlyEJcaFx1z7YyT_ietl2y59a8?purpose=inline)
+
+Git
+
+Tracks code changes and versions on your computer.
+
+[GitHub Vs. Bitbucket: Which Code Hosting Platform is Best? - Hatica](https://images.openai.com/static-rsc-4/h6nY0yf7JsEycY0Sx4mRb8nNKCcIcOBcXiDBB5zoyQB53kJfJ3b9fumZfym32-9QtI9bMIOfte8A4pxGn5j31kvTkB5L6rFXiUBQgJque7-Zjv7CR_c2oXmVt6Bh1m44flmqva6djfbFywIxlr_rYABjp8Znp5gQnvWf0wXwtYs?purpose=inline)
+
+GitHub
+
+Hosts Git repositories online and provides collaboration tools such as pull requests, issues, and project management.
+
+## 1. Why do we need version control?
+
+The instructor explains two main problems.
+
+- Code sharing: Two developers may work on different features of the same application. Their changes must be combined.
+- Versioning: If a new change breaks an application, the team needs to inspect previous versions and recover the correct code.
+
+Think of a plant-growing project. You record each day's changes so you can understand what changed and return to an earlier state if needed.
+
+## 2. Centralized vs. distributed version control
+
+[Architecture and Design of Subversion - SVN (Part 1)](https://images.openai.com/static-rsc-4/WpPRkoBnsgpAhuOTL_hTGzgiyzG1GFExV3BDFCyBCBKo1rWabg5nuBbya08s3UvIqHkeS_i7EtptH3YuLWgjRi0JMlCU04HfOpkDyv01VF_36NheACr2vGq9eKElhTIgwI3Zusu5M3Ewto7bZXjQo68i6t8eLeOB6rvXIoxX2YU?purpose=inline)
+
+Centralized — SVN
+
+Developers depend on a central server to exchange changes. If it becomes unavailable, collaboration is disrupted.
+
+[Learn Github and Git to Efficiently manage your project | by Abhishek Mani | Medium](https://images.openai.com/static-rsc-4/rrlvYmHMX03OO_QJIWdeIJnxD5FjeirYJaXHNawxA6BJ7gazHwkbAu8ItNBrmYYqu7t0yYSKk2pz8E8IBealcvx8X6nwV7AL8mV0qPZ3dZH5x5fuB9dCJfGwgH_etleMYU50j4QaWmfVMj5A_KP4-uA43btcuaokDl3o4n8dHic?purpose=inline)
+
+Distributed — Git
+
+Developers have local repositories containing project history. They can commit locally without needing the remote server online.
+
+Interview answer: Git is a distributed version control system. Each developer can maintain a local repository with project history, while remote repositories support collaboration and sharing.
+
+## 3. Git vs. GitHub
+
+|   |
+| - |
+
+Git
+
+|   |
+| - |
+
+GitHub
+
+|   |
+| - |
+
+Version control software
+
+|   |
+| - |
+
+Online repository hosting and collaboration platform
+
+|   |
+| - |
+
+Tracks changes and commits
+
+|   |
+| - |
+
+Hosts repositories and supports code reviews
+
+|   |
+| - |
+
+Works locally
+
+|   |
+| - |
+
+Provides remote collaboration
+
+|   |
+| - |
+
+Can work without GitHub
+
+|   |
+| - |
+
+Uses Git for Git-based repositories
+
+Alternatives mentioned in the video include GitLab and Bitbucket.
+
+## 4. The Git lifecycle
+
+Working directory
+
+Create or modify files
+
+svg
+
+Staging area — `git add`
+
+Choose changes for the next commit
+
+svg
+
+Local repository — `git commit`
+
+Save a version in project history
+
+svg
+
+Remote repository — `git push`
+
+Upload commits to GitHub or another remote
+
+## 5. Essential Git commands from the video
+
+|   |
+| - |
+
+Command
+
+|   |
+| - |
+
+Purpose
+
+|   |
+| - |
+
+`git --version`
+
+|   |
+| - |
+
+Check Git installation
+
+|   |
+| - |
+
+`git init`
+
+|   |
+| - |
+
+Initialize a repository
+
+|   |
+| - |
+
+`git status`
+
+|   |
+| - |
+
+Check current changes
+
+|   |
+| - |
+
+`git add calculator.sh`
+
+|   |
+| - |
+
+Stage a file
+
+|   |
+| - |
+
+`git diff`
+
+|   |
+| - |
+
+Inspect unstaged changes
+
+|   |
+| - |
+
+`git commit -m "Add calculator"`
+
+|   |
+| - |
+
+Create a commit
+
+|   |
+| - |
+
+`git log`
+
+|   |
+| - |
+
+View commit history
+
+|   |
+| - |
+
+`git push`
+
+|   |
+| - |
+
+Upload commits to a remote
+
+|   |
+| - |
+
+`git reset --hard <commit-id>`
+
+|   |
+| - |
+
+Reset tracked files and current branch to a commit
+
+Important: `git reset --hard` can permanently discard uncommitted changes and remove later commits from the current branch history. Don't use it casually on real projects.
+
+## 6. Practice lab for your Ubuntu WSL
+
+Run these commands in your terminal.
+```bash
+
+mkdir git-day9
+cd git-day9
+
+git init
+git branch -M main
+
+printf '# Calculator\n' > README.md
+
+git status
+git add README.md
+git status
+
+git commit -m "Initial calculator project"
+
+echo "Addition feature" >> README.md
+git diff
+
+git add README.md
+git commit -m "Add addition feature"
+
+git log --oneline
+```
+
+If Git asks for your identity, configure it with your own details:
+```arduino
+
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+```
+
+You have now practiced creating a repository, staging changes, committing versions, comparing changes, and reviewing history. You do not need GitHub yet for this local lab.
+
+## 7. Interview questions
+
+1\. What problem does Git solve?
+
+It tracks changes, maintains project history, and supports collaboration through repositories.
+
+Hide answer
+
+2\. What is the difference between git add and git commit?
+
+git add stages selected changes. git commit records the staged changes in local repository history.
+
+Hide answer
+
+3\. What is a fork?
+
+A fork is a separate copy of a repository, commonly created on a hosting platform to work independently or contribute changes.
+
+Hide answer
+
+4\. Can Git work without GitHub?
+
+Yes. Git can initialize repositories, track changes, and create commits entirely on a local machine.
+
+Hide answer
+
+5\. What does git push do?
+
+It sends local commits to a configured remote repository, subject to permissions and branch rules.
+
+Hide answer
+
+## &#x20; i want to keep this same in my git hub everything like my notes. give me insturctions i need it same if necessary removethe links or leave it just give me ready so i will copy and paste it there
